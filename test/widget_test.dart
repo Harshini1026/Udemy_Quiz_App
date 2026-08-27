@@ -14,11 +14,11 @@ import 'package:udemy_quizapp2/start_screen.dart';
 void main() {
   testWidgets('StartScreen shows the app title', (WidgetTester tester) async {
     await tester.pumpWidget(
-      const MaterialApp(
-        home: StartScreen(),
+      MaterialApp(
+        home: StartScreen(() {}),
       ),
     );
 
-    expect(find.text('Start Screen'), findsOneWidget);
+    expect(find.text('Learn Flutter the fun way'), findsOneWidget);
   });
 }
